@@ -4,6 +4,18 @@ O **EduCash** é uma aplicação web educacional voltada ao ensino de educação
 
 ---
 
+## Equipe do Projeto
+
+- CAIO NASCIMENTO FRANCISCO
+- JOÃO VICTOR ALVES PELUZIO
+- JANAINA HELLEN SOARES DOS SANTOS
+- MATHEUS GALHARDO
+- NÍCOLAS DOUGLAS CASTRO GARCÊS
+- RAFAEL REIF SILVA
+- SABRINA GOMES RODRIGUES
+
+---
+
 ## Sumário
 
 1. [Stack Tecnológica](#1-stack-tecnológica)
