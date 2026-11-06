@@ -1,0 +1,16 @@
+-- =============================================================================
+-- EduCash — Configuração Canônica de Carga Inicial (Seed)
+-- =============================================================================
+-- A carga pedagógica oficial da aplicação (1 trilha, 5 lições estruturadas,
+-- 15 atividades pedagógicas, 15 gabaritos com feedbacks, 5 faixas de nível
+-- e 5 conquistas cosméticas) é executada de forma canônica e reproduzível
+-- como migração do sistema:
+--   supabase/migrations/20261104180003_04_seed_data.sql
+--
+-- O Supabase CLI executa compulsoriamente todas as migrações durante o comando
+-- 'supabase db reset' ou deploy inicial.
+--
+-- Este arquivo seed.sql é reservado para fixtures opcionais de testes locais
+-- ou usuários fictícios de desenvolvimento, evitando execuções duplicadas e
+-- garantindo a integridade dos dados e identificadores estáveis.
+-- =============================================================================

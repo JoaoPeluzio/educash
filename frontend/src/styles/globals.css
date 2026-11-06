@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-border: #E2E8F0;
+    --color-border-strong: #CBD5E1;
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748B;
+
+    /* Semânticos */
+    --color-brand: #0F766E;
+    --color-brand-edge: #115E59;
+    --color-educoins: #D97706;
+    --color-educoins-edge: #B45309;
+    --color-xp: #4F46E5;
+    --color-xp-edge: #4338CA;
+  }
+
+  .dark {
+    --color-bg: #0B1120;
+    --color-surface: #1E293B;
+    --color-border: #334155;
+    --color-border-strong: #475569;
+    --color-text-primary: #F8FAFC;
+    --color-text-secondary: #94A3B8;
+    --color-text-muted: #64748B;
+
+    /* Semânticos Dark */
+    --color-brand: #14B8A6;
+    --color-brand-edge: #0F766E;
+    --color-educoins: #F59E0B;
+    --color-educoins-edge: #D97706;
+    --color-xp: #818CF8;
+    --color-xp-edge: #4F46E5;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-200;
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  .dark body {
+    @apply bg-[#0B1120] text-slate-100;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100;
+  }
+
+  h3 {
+    @apply text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* ========================================================================= */
+  /* BOTÕES TÁTEIS DISCRETOS (Duolingo-Inspired / Modern Fintech)               */
+  /* Relevo 3D tátil sutil e funcional, com resposta física ao clique           */
+  /* ========================================================================= */
+  .btn-tactile {
+    @apply min-h-[44px] px-6 py-2.5 rounded-xl font-bold text-sm inline-flex items-center justify-center gap-2 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-slate-900 disabled:opacity-50 disabled:pointer-events-none disabled:border-b-0;
+  }
+
+  /* Botão Primário Verde EduCash */
+  .btn-tactile-primary {
+    @apply btn-tactile text-white bg-teal-700 hover:bg-teal-800 active:bg-teal-900 border-b-4 border-teal-950 active:border-b-0 active:translate-y-1 focus:ring-teal-500;
+  }
+
+  /* Botão Secundário Superfície Neutra */
+  .btn-tactile-secondary {
+    @apply btn-tactile text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 active:bg-slate-100 border border-slate-200 dark:border-slate-700 border-b-4 border-b-slate-300 dark:border-b-slate-900 active:border-b active:translate-y-0.5 focus:ring-teal-500;
+  }
+
+  /* Botão Dourado EduCoins */
+  .btn-tactile-coins {
+    @apply btn-tactile text-white bg-amber-500 hover:bg-amber-400 active:bg-amber-600 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 focus:ring-amber-500;
+  }
+
+  /* Botão Índigo XP */
+  .btn-tactile-xp {
+    @apply btn-tactile text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 border-b-4 border-indigo-800 active:border-b-0 active:translate-y-1 focus:ring-indigo-500;
+  }
+
+  /* Botão Destrutivo / Erro */
+  .btn-tactile-danger {
+    @apply btn-tactile text-white bg-rose-600 hover:bg-rose-500 active:bg-rose-700 border-b-4 border-rose-800 active:border-b-0 active:translate-y-1 focus:ring-rose-500;
+  }
+
+  /* Opção de Resposta Interativa (Múltipla Escolha / VF / Pareamento) */
+  .interactive-option {
+    @apply w-full text-left p-4 rounded-2xl border-2 border-b-4 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 active:border-b-2 active:translate-y-0.5 transition-all duration-150 flex items-start gap-3.5 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900;
+  }
+
+  .interactive-option-selected {
+    @apply border-teal-600 dark:border-teal-400 border-b-4 border-b-teal-800 dark:border-b-teal-600 bg-teal-50/70 dark:bg-teal-950/40 text-teal-950 dark:text-teal-100;
+  }
+
+  /* Indicador HUD (Head-Up Display de Gamificação) */
+  .hud-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border transition-colors shadow-2xs;
+  }
+
+  /* Cartão Interativo com Elevação Sutil */
+  .card-interactive {
+    @apply bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-xs hover:border-teal-300 dark:hover:border-teal-700 hover:shadow-sm transition-all duration-150;
+  }
+}
+
+@layer utilities {
+  /* Respeito estrito a preferências de movimento reduzido (Acessibilidade WCAG 2.3.3) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

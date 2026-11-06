@@ -1,0 +1,12 @@
+# Configuração de build e roteamento SPA para o Netlify
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+# Fallback para Single Page Application (SPA) no React
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
